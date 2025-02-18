@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
     "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src --out-dir build",
     "test": "vitest"
   },
   "keywords": [],
@@ -17,7 +21,7 @@
     "dotenv": "^16.4.7",
     "fastify": "^5.2.0",
     "knex": "^3.1.0",
-    "sqlite3": "^5.1.7",
+    "pg": "^8.13.3",
     "zod": "^3.24.1"
   },
   "devDependencies": {
@@ -25,7 +29,9 @@
     "@types/node": "^22.10.2",
     "@types/supertest": "^6.0.2",
     "eslint": "^9.17.0",
+    "sqlite3": "^5.1.7",
     "supertest": "^7.0.0",
+    "tsup": "^8.3.6",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vite": "^6.1.0",
