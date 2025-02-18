@@ -3,6 +3,7 @@ import { z } from "zod";
 
 if (process.env.NODE_ENV === "test") {
   // loads .env.test
+  console.log("Running test env");
   config({ path: ".env.test", override: true });
 } else {
   // loads .env
